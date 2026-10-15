@@ -1,6 +1,6 @@
 #ifndef UTILIDADES_H
 #define UTILIDADES_H
-
+//Utilidades o validaciones
 #include <string>
 using namespace std;
 
