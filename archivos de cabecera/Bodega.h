@@ -6,7 +6,6 @@
 
 using namespace std;
 
-// STUB de Persona 1. Persona 2 lo reemplaza (matriz dinamica, etc.).
 class Bodega {
 private:
     string codigo;
@@ -15,10 +14,6 @@ private:
     int filas;
     int columnas;
     Celda** matriz;
-public:
-    Bodega(const string& codigo) : codigo(codigo) {}
-    string getCodigo() const { return codigo; }
-
 public:
     Bodega(const string& codigo, const string& nombre, int tipo, int filas, int columnas);
     ~Bodega();

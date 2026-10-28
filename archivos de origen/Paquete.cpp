@@ -59,6 +59,7 @@ bool Paquete::puedeCambiarA(int nuevo) const {
         return nuevo == ALMACENADO;
     default:
         return false;   
+    }
 }
 
 void Paquete::aplicarCambio(int nuevo, Colaborador* responsable, const Fecha& fecha) {
@@ -160,12 +161,12 @@ bool Paquete::resolverIncidencia(Colaborador* responsable, const Fecha& fecha) {
         return false;
     }
 
-    bool Paquete::necesitaAlmacenarse() const {
-        return estado == RECIBIDO || (estado == INCIDENCIA && estadoPrevioIncidencia == RECIBIDO);
-    }
-
     aplicarCambio(destino, responsable, fecha);
     return true;
+}
+
+bool Paquete::necesitaAlmacenarse() const {
+    return estado == RECIBIDO || (estado == INCIDENCIA && estadoPrevioIncidencia == RECIBIDO);
 }
 
 bool Paquete::tieneColaboradorEnBitacora(const string& identificacion) const {

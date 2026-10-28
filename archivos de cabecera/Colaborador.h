@@ -7,7 +7,6 @@
 
 using namespace std;
 
-// STUB de Persona 1. Persona 2 lo reemplaza (agrega fechaIngreso con Fecha).
 class Colaborador {
 private:
     string identificacion;
@@ -16,20 +15,13 @@ private:
     Fecha fechaIngreso;
 
 public:
-    Colaborador(const string& id, const string& nombre, const string& puesto)
-        : identificacion(id), nombreCompleto(nombre), puesto(puesto) {
-    }
-    string getIdentificacion() const { return identificacion; }
-    string getNombreCompleto() const { return nombreCompleto; }
-    string getPuesto()         const { return puesto;         }
-    Fecha getFechaIngreso()    const { return fechaIngreso;   }
-
-
-
-
-    void mostrar() const {
-        cout << identificacion << " - " << nombreCompleto << " (" << puesto << ")" << endl;
-    }
+    Colaborador(const string& identificacion, const string& nombreCompleto,
+        const string& puesto, const Fecha& fechaIngreso);
+    string getIdentificacion() const;
+    string getNombreCompleto() const;
+    string getPuesto() const;
+    Fecha getFechaIngreso() const;
+    void mostrar() const;
 };
 
 #endif

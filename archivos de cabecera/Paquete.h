@@ -12,15 +12,11 @@
 
 using namespace std;
 
-// STUB de Persona 1. Persona 2 lo reemplaza.
 class Paquete {
-private:
-    string codigo;
 public:
     enum Estado {
         RECIBIDO = 1, ALMACENADO = 2, EN_TRANSITO = 3, ENTREGADO = 4, INCIDENCIA = 5
     };
-
 
 private:
     string codigo;
