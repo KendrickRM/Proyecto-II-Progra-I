@@ -366,4 +366,3 @@ void MenuPaquetes::ejecutar(Sistema* sistema, CentroDistribucion* centro) {
     } while (op != 0);
 }
 
-Claude terminó la respuesta

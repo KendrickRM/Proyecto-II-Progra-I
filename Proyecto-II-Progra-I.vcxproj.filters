@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="archivos de origen\*.cpp" />
+    <ClCompile Include="archivos de origen\*.cpp" />
+    <ClCompile Include="archivos de origen\*.cpp" />
+    <ClCompile Include="archivos de origen\*.cpp" />
+    <ClCompile Include="archivos de origen\*.cpp" />
+    <ClCompile Include="archivos de origen\*.cpp" />
+    <ClCompile Include="archivos de origen\*.cpp" />
+    <ClCompile Include="archivos de origen\*.cpp" />
+    <ClCompile Include="archivos de origen\*.cpp" />
+    <ClCompile Include="archivos de origen\*.cpp" />
+    <ClCompile Include="archivos de origen\*.cpp" />
+    <ClCompile Include="archivos de origen\*.cpp" />
+    <ClCompile Include="archivos de origen\*.cpp" />
+    <ClCompile Include="archivos de origen\*.cpp" />
+    <ClCompile Include="archivos de origen\*.cpp" />
+    <ClCompile Include="archivos de origen\*.cpp" />
+    <ClCompile Include="archivos de origen\*.cpp" />
+    <ClCompile Include="archivos de origen\*.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="archivos de cabecera\*.h" />
+    <ClInclude Include="archivos de cabecera\*.h" />
+    <ClInclude Include="archivos de cabecera\*.h" />
+    <ClInclude Include="archivos de cabecera\*.h" />
+    <ClInclude Include="archivos de cabecera\*.h" />
+    <ClInclude Include="archivos de cabecera\*.h" />
+    <ClInclude Include="archivos de cabecera\*.h" />
+    <ClInclude Include="archivos de cabecera\*.h" />
+    <ClInclude Include="archivos de cabecera\*.h" />
+    <ClInclude Include="archivos de cabecera\*.h" />
+    <ClInclude Include="archivos de cabecera\*.h" />
+    <ClInclude Include="archivos de cabecera\*.h" />
+    <ClInclude Include="archivos de cabecera\*.h" />
+    <ClInclude Include="archivos de cabecera\*.h" />
+    <ClInclude Include="archivos de cabecera\*.h" />
+    <ClInclude Include="archivos de cabecera\*.h" />
+    <ClInclude Include="archivos de cabecera\*.h" />
+    <ClInclude Include="archivos de cabecera\*.h" />
+    <ClInclude Include="archivos de cabecera\*.h" />
+    <ClInclude Include="archivos de cabecera\*.h" />
+    <ClInclude Include="archivos de cabecera\*.h" />
+    <ClInclude Include="archivos de cabecera\*.h" />
+    <ClInclude Include="archivos de cabecera\*.h" />
+    <ClInclude Include="archivos de cabecera\*.h" />
+    <ClInclude Include="archivos de cabecera\*.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Archivos de Cabecera">
+      <UniqueIdentifier>{42e6251a-fb60-4b1f-8bc1-bb5f2dc3ce66}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
