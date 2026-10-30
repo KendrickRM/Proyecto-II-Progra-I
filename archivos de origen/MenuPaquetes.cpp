@@ -1,6 +1,7 @@
 #include "MenuPaquetes.h"
 #include "Utilidades.h"
 #include "Paquete.h"
+#include "Relaciones.h"
 #include "Bodega.h"
 #include "Cliente.h"
 #include "Colaborador.h"
@@ -101,7 +102,14 @@ static void elegirCeldaManual(CentroDistribucion* centro, int categoria, Bodega*
 
 static void registrarPaquete(Sistema* sistema, CentroDistribucion* centro) {
     cout << "--- Registrar paquete ---" << endl;
-    string codigo = Utilidades::leerTexto("Codigo del paquete: ");
+    string codigo;
+    while (true) {
+        codigo = Utilidades::leerTexto("Codigo del paquete (PK + 3 digitos, ej: PK101): ");
+        if (Utilidades::codigoPaqueteValido(codigo)) {
+            break;
+        }
+        cout << "Error: el codigo debe ser PK seguido de exactamente 3 digitos." << endl;
+    }
     if (sistema->codigoPaqueteExiste(codigo)) {
         cout << "Error: ya existe un paquete con ese codigo en el sistema. Registro cancelado." << endl;
         return;
@@ -166,6 +174,10 @@ static void eliminarPaquete(Sistema* sistema, CentroDistribucion* centro) {
     if (p->getEstado() != Paquete::RECIBIDO || p->getCelda() != 0) {
         cout << "No se puede eliminar: el paquete solo se elimina si esta en estado Recibido y sin celda. "
             << "Estado actual: " << p->getNombreEstado() << "." << endl;
+        return;
+    }
+    if (Relaciones::paqueteTieneSolicitudes(centro, p) || Relaciones::despachoDePaquete(centro, p) != 0) {
+        cout << "No se puede eliminar: el paquete tiene solicitudes o despachos asociados." << endl;
         return;
     }
     cout << "Eliminar el paquete " << p->getCodigo() << "? 1. Si  2. No" << endl;
@@ -339,6 +351,7 @@ void MenuPaquetes::ejecutar(Sistema* sistema, CentroDistribucion* centro) {
     }
     int op;
     do {
+        system("cls");
         cout << endl << "===== PAQUETES (Centro: " << centro->getNombre() << ") =====" << endl;
         cout << "1. Registrar paquete" << endl;
         cout << "2. Buscar paquete por codigo" << endl;
@@ -362,6 +375,9 @@ void MenuPaquetes::ejecutar(Sistema* sistema, CentroDistribucion* centro) {
         case 8: resolverIncidencia(sistema, centro); break;
         case 9: verBitacora(sistema, centro); break;
         default: break;
+        }
+        if (op != 0) {
+            system("pause");
         }
     } while (op != 0);
 }
