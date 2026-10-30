@@ -8,7 +8,18 @@ Paquete::Paquete(const string& codigo, const string& descripcion, double peso,
     : codigo(codigo), descripcion(descripcion), peso(peso), categoria(categoria),
     propietario(propietario), codigoCentro(codigoCentro),
     estado(RECIBIDO), estadoPrevioIncidencia(RECIBIDO), bodega(0), celda(0) {
+    // El peso debe ser mayor que 0 y no superar el maximo
+    if (this->peso > pesoMaximo()) {
+        this->peso = pesoMaximo();
+    }
+    if (this->peso <= 0) {
+        this->peso = 0.01;
+    }
     bitacora = new ListaBitacora();
+}
+
+double Paquete::pesoMaximo() {
+    return 5000;
 }
 
 Paquete::~Paquete() {

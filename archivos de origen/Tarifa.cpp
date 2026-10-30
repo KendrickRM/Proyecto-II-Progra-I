@@ -1,4 +1,5 @@
 #include "Tarifa.h"
+#include <sstream>
 using namespace std;
 
 const double Tarifa::TARIFA_GENERAL = 1500;
@@ -30,20 +31,10 @@ double Tarifa::calcularCostoFinal(double peso, int categoria, const Cliente* cli
 }
 
 string Tarifa::formatearDecimal(double valor) {
-	bool negativo = valor < 0;
-	if (negativo) {
-		valor = -valor;
-	}
-	long centesimas = (long)(valor * 100 + 0.5);
-	long enteros = centesimas / 100;
-	long resto = centesimas % 100;
-	string texto = to_string(enteros) + ".";
-	if (resto < 10) {
-		texto += "0";
-	}
-	texto += to_string(resto);
-	if (negativo) {
-		texto = "-" + texto;
-	}
-	return texto;
+	// Todo en double: sin convertir a enteros, asi no hay desbordes
+	ostringstream os;
+	os.setf(ios::fixed);
+	os.precision(2);
+	os << valor;
+	return os.str();
 }

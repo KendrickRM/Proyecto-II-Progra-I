@@ -24,6 +24,12 @@ Bodega::Bodega(const string& codigo, const string& nombre, int tipo, int filas, 
     if (this->columnas < 1) {
         this->columnas = 1;
     }
+    if (this->filas > dimensionMaxima()) {
+        this->filas = dimensionMaxima();
+    }
+    if (this->columnas > dimensionMaxima()) {
+        this->columnas = dimensionMaxima();
+    }
 
     bool largo = (this->filas > 10 || this->columnas > 10);
 
@@ -50,6 +56,10 @@ string Bodega::getNombre() const { return nombre; }
 int Bodega::getTipo() const { return tipo; }
 int Bodega::getFilas() const { return filas; }
 int Bodega::getColumnas() const { return columnas; }
+
+int Bodega::dimensionMaxima() {
+    return 50;
+}
 
 bool Bodega::tipoValido(int tipo) {
     return tipo >= 1 && tipo <= 4;

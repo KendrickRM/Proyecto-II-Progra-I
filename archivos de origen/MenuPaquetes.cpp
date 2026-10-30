@@ -112,11 +112,11 @@ static void registrarPaquete(Sistema* sistema, CentroDistribucion* centro) {
 
     double peso;
     while (true) {
-        peso = Utilidades::leerDecimal("Peso en kg (mayor que 0): ");
-        if (peso > 0) {
+        peso = Utilidades::leerDecimal("Peso en kg (mayor que 0 y maximo " + to_string((int)Paquete::pesoMaximo()) + "): ");
+        if (peso > 0 && peso <= Paquete::pesoMaximo()) {
             break;
         }
-        cout << "Error: el peso debe ser mayor que 0." << endl;
+        cout << "Error: el peso debe ser mayor que 0 y como maximo " << Paquete::pesoMaximo() << " kg." << endl;
     }
 
     cout << "Categorias: 1 General, 2 Fragil, 3 Tecnologia, 4 Documentos" << endl;
