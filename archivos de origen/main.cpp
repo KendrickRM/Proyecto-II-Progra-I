@@ -11,7 +11,7 @@ int main() {
         menu.ejecutar();
     }
     catch (EntradaCerrada&) {
-        // La entrada se cerro: se sale normalmente y los destructores liberan la memoria
+        //Entrada cerrada: se sale normalmente
     }
 
     return 0;

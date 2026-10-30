@@ -23,11 +23,11 @@ private:
     Colaborador* colaborador;
     string centroOrigen;
     string destino;
-    Fecha fechaDespacho;    // incluye la hora y el minuto
+    Fecha fechaDespacho;    // incluye hora y minuto
     int estado;
 
 public:
-    // Nace En proceso.
+    //Nace En proceso
     Despacho(string codigo, SolicitudEnvio* solicitud, Paquete* paquete, Cliente* cliente,
         Colaborador* colaborador, string centroOrigen, string destino, Fecha fechaDespacho);
     string toStringDespacho();
@@ -45,7 +45,7 @@ public:
     int getEstado() const { return estado; }
     string getNombreEstado() const { return nombreEstado(estado); }
 
-    // Solo En proceso -> Finalizado.
+    //Solo En proceso -> Finalizado
     bool finalizar();
 
     static string nombreEstado(int estado);

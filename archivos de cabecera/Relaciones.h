@@ -4,8 +4,8 @@
 #include "CentroDistribucion.h"
 using namespace std;
 
-// Persona 3. Consultas sobre las relaciones entre paquetes, solicitudes y despachos de un centro.
-// Las usan los menus para validar creaciones, aprobaciones y eliminaciones.
+//Consultas entre paquetes, solicitudes y despachos de un centro
+//Se usan para validar creaciones, aprobaciones y eliminaciones
 class Relaciones {
 public:
 	static SolicitudEnvio* solicitudPendienteDe(CentroDistribucion* centro, Paquete* paquete);

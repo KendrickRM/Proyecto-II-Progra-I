@@ -51,7 +51,7 @@ public:
         return act->getDato();
     }
 
-    // Para Persona 3: un colaborador no se elimina si figura en alguna bitacora
+    //Para eliminar colaboradores
     bool participoColaborador(const string& identificacion) const {
         NodoBitacora* act = primero;
         while (act != 0) {

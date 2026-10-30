@@ -148,7 +148,7 @@ void MenuPrincipal::ejecutar() {
     if (sistema == 0) return;
     int opcion;
 
-    // Pantalla de bienvenida
+    //Pantalla de bienvenida
     system("cls");
     cout << R"(   ___                                                _   /_/           _____
   / _ \_ __ ___   __ _ _ __ __ _ _ __ ___   __ _  ___(_) ___  _ __      \_   \

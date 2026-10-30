@@ -8,18 +8,20 @@ class MenuPrincipal {
 private:
     Sistema* sistema;
 
+    //Metodos Propios (Menus)
     void mostrarMenuPrincipal();
     void menuCentros();
-    void menuClientes();        // Persona 3
-    void menuColaboradores();   // Persona 3
-    void menuBodegas();         // Persona 2
-    void menuPaquetes();        // Persona 2
-    void menuSolicitudes();     // Persona 3
-    void menuDespachos();       // Persona 3
-    void menuReportes();        // Persona 3
+    void menuClientes();
+    void menuColaboradores();
+    void menuBodegas();
+    void menuPaquetes();
+    void menuSolicitudes();
+    void menuDespachos();
+    void menuReportes();
 
     CentroDistribucion* seleccionarCentro();
 
+    //Metodos Propios (Centros)
     void registrarCentro();
     void buscarCentro();
     void eliminarCentro();

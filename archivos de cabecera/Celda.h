@@ -6,7 +6,7 @@ using namespace std;
 
 class Paquete;  
 
-// Persona 2. Una posicion de la matriz de una bodega.
+//Posicion de la matriz de una bodega
 class Celda {
 private:
     string codigoBodega;

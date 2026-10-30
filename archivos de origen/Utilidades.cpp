@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-// Largo maximo de cualquier texto digitado (evita entradas gigantes que desordenan la pantalla)
+//Largo maximo de los textos
 static const int MAX_TEXTO = 100;
 
 static string leerLinea(const string& msg) {
@@ -200,7 +200,7 @@ string Utilidades::leerCorreo(const string& msg) {
     }
 }
 
-// Completa con espacios: centrado o alineado a la izquierda
+
 static string ajustar(const string& texto, int ancho, bool centrado) {
     int falta = ancho - (int)texto.size();
     if (falta <= 0) {
@@ -247,7 +247,7 @@ void Utilidades::imprimirTabla(int columnas, int filas, const string* encabezado
     delete[] ancho;
 }
 
-// El prefijo se muestra en pantalla y lo agrega el sistema: el usuario solo digita los numeros
+//El sistema agrega el prefijo 
 string Utilidades::leerCodigoCentro(const string& msg) {
     while (true) {
         string t = leerLinea(msg + "CD-");
@@ -278,7 +278,7 @@ string Utilidades::aMayusculas(const string& texto) {
     return r;
 }
 
-// El codigo de bodega no distingue mayusculas de minusculas: "b" y "B" son la misma bodega
+//No distingue mayusculas
 string Utilidades::leerCodigoBodega(const string& msg) {
     while (true) {
         string t = aMayusculas(leerTexto(msg));

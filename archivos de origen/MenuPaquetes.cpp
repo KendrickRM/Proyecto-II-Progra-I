@@ -99,7 +99,7 @@ static void elegirCeldaManual(CentroDistribucion* centro, int categoria, Bodega*
     }
 }
 
-// ---------- Opciones del menu ----------
+///////////////////////////////Opciones del menu////////////////////////////////
 
 static void registrarPaquete(Sistema* sistema, CentroDistribucion* centro) {
     cout << "--- Registrar paquete ---" << endl;
@@ -336,7 +336,7 @@ static void resolverIncidencia(Sistema* sistema, CentroDistribucion* centro) {
         cout << "La incidencia ocurrio estando Recibido: use la opcion Almacenar paquete." << endl;
         return;
     }
-    // Un paquete solo vuelve a En transito si su despacho esta En proceso
+    //El despacho debe estar En proceso
     if (p->getEstadoPrevioIncidencia() == Paquete::EN_TRANSITO) {
         Despacho* d = Relaciones::despachoDePaquete(centro, p);
         if (d == 0 || d->getEstado() != Despacho::EN_PROCESO) {
