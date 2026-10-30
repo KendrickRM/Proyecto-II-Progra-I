@@ -28,7 +28,7 @@ static void crearSolicitud(Sistema* sistema, CentroDistribucion* centro) {
 		return;
 	}
 
-	string codigoPaquete = Utilidades::leerTexto("Codigo del paquete (ej: PK101): ");
+	string codigoPaquete = Utilidades::leerCodigoPaquete("Codigo del paquete: ");
 	Paquete* paquete = centro->getPaquetes()->buscar(codigoPaquete);
 	if (paquete == 0) {
 		cout << "Error: no existe ese paquete en este centro. Operacion cancelada." << endl;

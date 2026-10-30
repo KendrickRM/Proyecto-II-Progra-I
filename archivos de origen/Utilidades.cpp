@@ -184,6 +184,89 @@ string Utilidades::leerCorreo(const string& msg) {
     }
 }
 
+// Completa con espacios: centrado o alineado a la izquierda
+static string ajustar(const string& texto, int ancho, bool centrado) {
+    int falta = ancho - (int)texto.size();
+    if (falta <= 0) {
+        return texto;
+    }
+    if (!centrado) {
+        return texto + string(falta, ' ');
+    }
+    int izquierda = falta / 2;
+    return string(izquierda, ' ') + texto + string(falta - izquierda, ' ');
+}
+
+void Utilidades::imprimirTabla(int columnas, int filas, const string* encabezados,
+    const string* celdas, bool centrarCeldas) {
+    int* ancho = new int[columnas];
+    for (int c = 0; c < columnas; c++) {
+        ancho[c] = (int)encabezados[c].size();
+        for (int f = 0; f < filas; f++) {
+            int largo = (int)celdas[f * columnas + c].size();
+            if (largo > ancho[c]) {
+                ancho[c] = largo;
+            }
+        }
+    }
+
+    string separador = "+";
+    for (int c = 0; c < columnas; c++) {
+        separador += string(ancho[c] + 2, '-') + "+";
+    }
+
+    cout << separador << endl << "|";
+    for (int c = 0; c < columnas; c++) {
+        cout << " " << ajustar(encabezados[c], ancho[c], true) << " |";
+    }
+    cout << endl << separador << endl;
+    for (int f = 0; f < filas; f++) {
+        cout << "|";
+        for (int c = 0; c < columnas; c++) {
+            cout << " " << ajustar(celdas[f * columnas + c], ancho[c], centrarCeldas) << " |";
+        }
+        cout << endl;
+    }
+    cout << separador << endl;
+    delete[] ancho;
+}
+
+// El prefijo se muestra en pantalla y lo agrega el sistema: el usuario solo digita los numeros
+string Utilidades::leerCodigoCentro(const string& msg) {
+    while (true) {
+        string t = leerLinea(msg + "CD-");
+        if (soloDigitos(t, 2)) {
+            return "CD-" + t;
+        }
+        cout << "Error: digite exactamente 2 numeros (CD-XX)." << endl;
+    }
+}
+
+string Utilidades::leerCodigoPaquete(const string& msg) {
+    while (true) {
+        string t = leerLinea(msg + "PK");
+        if (soloDigitos(t, 3)) {
+            return "PK" + t;
+        }
+        cout << "Error: digite exactamente 3 numeros (PKXXX)." << endl;
+    }
+}
+
+string Utilidades::aMayusculas(const string& texto) {
+    string r = texto;
+    for (int i = 0; i < (int)r.length(); i++) {
+        if (r[i] >= 'a' && r[i] <= 'z') {
+            r[i] = r[i] - 'a' + 'A';
+        }
+    }
+    return r;
+}
+
+// El codigo de bodega no distingue mayusculas de minusculas: "b" y "B" son la misma bodega
+string Utilidades::leerCodigoBodega(const string& msg) {
+    return aMayusculas(leerTexto(msg));
+}
+
 string Utilidades::leerTelefono(const string& msg) {
     while (true) {
         string t = leerLinea(msg);
