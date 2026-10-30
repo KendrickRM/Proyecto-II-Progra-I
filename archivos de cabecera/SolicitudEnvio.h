@@ -26,7 +26,7 @@ private:
     int estado;
 
 public:
-    // Nace Pendiente. El costo estimado se calcula con Tarifa (peso, categoria y descuento del cliente).
+    //Nace Pendiente (el costo estimado se calcula con Tarifa)
     SolicitudEnvio(string codigo, Cliente* cliente, Paquete* paquete, Colaborador* colaborador,
         string codigoCentro, string destino, Fecha fechaSolicitud);
     string toStringSolicitud();
@@ -44,7 +44,7 @@ public:
 
     bool estaPendiente() const { return estado == PENDIENTE; }
 
-    // Solo permite Pendiente -> Aprobada, Rechazada o Anulada. Los estados finales no cambian.
+    //Solo Pendiente -> Aprobada, Rechazada o Anulada
     bool cambiarEstado(int nuevoEstado);
 
     static string nombreEstado(int estado);

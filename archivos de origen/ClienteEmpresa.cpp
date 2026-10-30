@@ -7,7 +7,7 @@ ClienteEmpresa::ClienteEmpresa(const string& identificacion, const string& nombr
     const string& actividadEconomica, double porcentajeDescuento)
     : Cliente(identificacion, nombre, telefono, correo),
     actividadEconomica(actividadEconomica), porcentajeDescuento(porcentajeDescuento) {
-    // El descuento autorizado debe estar entre 0% y 100%
+    
     if (this->porcentajeDescuento < 0) {
         this->porcentajeDescuento = 0;
     }

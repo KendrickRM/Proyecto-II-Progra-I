@@ -24,7 +24,7 @@ static CentroDistribucion* elegirCentro(Sistema* sistema) {
 	return centro;
 }
 
-// 1. Historial de un cliente
+//Reporte 1: Historial de un cliente
 static void reporteHistorialCliente(Sistema* sistema) {
 	cout << "--- Historial de un cliente ---" << endl;
 	CentroDistribucion* centro = elegirCentro(sistema);
@@ -72,7 +72,7 @@ static void reporteHistorialCliente(Sistema* sistema) {
 	}
 }
 
-// 2. Clientes por cantidad de envios (despachos Finalizados, de mayor a menor)
+//Reporte 2: Clientes por cantidad de envios
 static void reporteClientesPorEnvios(Sistema* sistema) {
 	cout << "--- Clientes por cantidad de envios ---" << endl;
 	CentroDistribucion* centro = elegirCentro(sistema);
@@ -100,7 +100,7 @@ static void reporteClientesPorEnvios(Sistema* sistema) {
 		}
 	}
 
-	// Insercion: estable, un cliente solo pasa delante de otro con estrictamente menos envios
+	
 	for (int i = 1; i < n; i++) {
 		Cliente* clienteActual = orden[i];
 		int cuentaActual = cuenta[i];
@@ -122,7 +122,7 @@ static void reporteClientesPorEnvios(Sistema* sistema) {
 	delete[] cuenta;
 }
 
-// 3. Bitacora de un paquete (del cambio mas antiguo al mas reciente)
+//Reporte 3: Bitacora de un paquete
 static void reporteBitacoraPaquete(Sistema* sistema) {
 	cout << "--- Bitacora de un paquete ---" << endl;
 	string codigo = Utilidades::leerCodigoPaquete("Codigo del paquete: ");
@@ -136,7 +136,7 @@ static void reporteBitacoraPaquete(Sistema* sistema) {
 	p->mostrarBitacora();
 }
 
-// 4. Consulta de despacho de un paquete
+//Reporte 4: Consulta de despacho de un paquete
 static void reporteDespachoDePaquete(Sistema* sistema) {
 	cout << "--- Consulta de despacho de un paquete ---" << endl;
 	string codigo = Utilidades::leerCodigoPaquete("Codigo del paquete: ");
@@ -166,7 +166,7 @@ static void reporteDespachoDePaquete(Sistema* sistema) {
 	}
 }
 
-// 5. Ocupacion de bodegas (por centro y por bodega)
+//Reporte 5: Ocupacion de bodegas
 static void reporteOcupacionBodegas(Sistema* sistema) {
 	cout << "--- Ocupacion de bodegas ---" << endl;
 	ListaCentros* centros = sistema->getCentros();
@@ -202,7 +202,7 @@ static void reporteOcupacionBodegas(Sistema* sistema) {
 	}
 }
 
-// 6. Despachos por colaborador
+//Reporte 6: Despachos por colaborador
 static void reporteDespachosPorColaborador(Sistema* sistema) {
 	cout << "--- Despachos por colaborador ---" << endl;
 	CentroDistribucion* centro = elegirCentro(sistema);

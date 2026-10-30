@@ -31,7 +31,7 @@ double Tarifa::calcularCostoFinal(double peso, int categoria, const Cliente* cli
 }
 
 string Tarifa::formatearDecimal(double valor) {
-	// Todo en double: sin convertir a enteros, asi no hay desbordes
+
 	ostringstream os;
 	os.setf(ios::fixed);
 	os.precision(2);

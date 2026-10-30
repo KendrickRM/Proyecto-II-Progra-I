@@ -4,7 +4,7 @@
 #include "Sistema.h"
 using namespace std;
 
-// Persona 3. Submenu de Reportes (los 6 reportes del enunciado).
+//Submenu de Reportes
 class MenuReportes {
 public:
 	static void ejecutar(Sistema* sistema);

@@ -4,7 +4,7 @@
 #include "Sistema.h"
 using namespace std;
 
-// Persona 3. Submenu de Despachos de un centro.
+//Submenu de Despachos de un centro
 class MenuDespachos {
 public:
 	static void ejecutar(Sistema* sistema, CentroDistribucion* centro);

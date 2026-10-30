@@ -53,7 +53,8 @@ static void finalizarEntrega(Sistema* sistema, CentroDistribucion* centro) {
 		return;
 	}
 	Fecha fecha = Fecha::leerFecha("Fecha de la entrega:");
-	// El responsable del cambio es el colaborador asociado al despacho
+
+	//El responsable es el colaborador del despacho
 	if (!paquete->marcarEntregado(d->getColaborador(), fecha)) {
 		cout << "No se pudo marcar el paquete como Entregado. No se realizo ningun cambio." << endl;
 		return;

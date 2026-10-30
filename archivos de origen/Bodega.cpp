@@ -4,7 +4,6 @@
 #include <sstream>
 using namespace std;
 
-// Centra el texto dentro de 'ancho' caracteres (si sobra un espacio, va a la derecha)
 static string centrar(const string& s, int ancho) {
     int falta = ancho - (int)s.size();
     if (falta <= 0) {
@@ -171,7 +170,7 @@ void Bodega::dibujar() const {
     cout << "Bodega " << codigo << " - " << nombre << " (" << nombreTipo(tipo) << ") "
         << filas << "x" << columnas << endl;
 
-    // Ancho de celda: el texto mas largo entre identificador, LIBRE y codigo de paquete
+    //Ancho de celda
     int ancho = 5;
     for (int i = 0; i < filas; i++) {
         for (int j = 0; j < columnas; j++) {
@@ -188,8 +187,7 @@ void Bodega::dibujar() const {
         }
     }
 
-    // Si la bodega es muy ancha, las columnas se reparten en bloques que caben en la consola
-    // (si no, cada fila se parte en varias lineas y la tabla se desordena)
+    //Columnas por bloques 
     const int ANCHO_CONSOLA = 100;
     int columnasPorBloque = (ANCHO_CONSOLA - 1) / (ancho + 3);
     if (columnasPorBloque < 1) {
@@ -211,7 +209,7 @@ void Bodega::dibujar() const {
             separador += string(ancho + 2, '-') + "+";
         }
 
-        // Cada celda tiene dos lineas: su identificador (A-00) y LIBRE o el codigo del paquete (PK101)
+        //Identificador y codigo del paquete
         cout << separador << endl;
         for (int i = 0; i < filas; i++) {
             cout << "|";

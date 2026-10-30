@@ -54,8 +54,7 @@ public:
     Celda* getCelda() const;
     ListaBitacora* getBitacora() const;
 
-    // Peso maximo en kg (el peso debe ser mayor que 0). Con la tarifa mas alta (2500 por kg)
-    // el costo maximo es de 12.5 millones.
+
     static double pesoMaximo();
 
     static bool categoriaValida(int categoria);
@@ -65,7 +64,7 @@ public:
 
     bool necesitaAlmacenarse() const;
 
-    // Estado en el que estaba el paquete cuando ocurrio la ultima incidencia
+    //Estado previo a la ultima incidencia
     int getEstadoPrevioIncidencia() const;
 
 

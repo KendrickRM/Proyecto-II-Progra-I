@@ -128,7 +128,7 @@ static void aprobarSolicitud(Sistema* sistema, CentroDistribucion* centro) {
 	}
 	Fecha fecha = Fecha::leerFechaHora("Fecha y hora del despacho:");
 
-	// El paquete pasa a En transito y libera su celda; el responsable es el de la solicitud
+	//El paquete pasa a En transito y libera su celda
 	if (!paquete->pasarATransito(s->getColaborador(), fecha)) {
 		cout << "No se pudo pasar el paquete a En transito. No se realizo ningun cambio." << endl;
 		return;
