@@ -20,12 +20,9 @@ private:
 
     CentroDistribucion* seleccionarCentro();
 
-    void reporteHistorialCliente();          // Persona 3
-    void reporteClientesPorEnvios();         // Persona 3
-    void reporteBitacoraPaquete();           // Persona 3
-    void reporteDespachoDePaquete();         // Persona 3
-    void reporteOcupacionBodegas();          // Persona 3
-    void reporteDespachosPorColaborador();   // Persona 3
+    void registrarCentro();
+    void buscarCentro();
+    void eliminarCentro();
 
 public:
     MenuPrincipal(Sistema* sistema);

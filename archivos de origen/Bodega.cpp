@@ -1,22 +1,17 @@
 #include "Bodega.h"
+#include "Paquete.h"
 #include <iostream>
 #include <sstream>
 using namespace std;
 
-static string padIzq(const string& s, int ancho) {
-    string r = s;
-    while ((int)r.size() < ancho) {
-        r = " " + r;
+// Centra el texto dentro de 'ancho' caracteres (si sobra un espacio, va a la derecha)
+static string centrar(const string& s, int ancho) {
+    int falta = ancho - (int)s.size();
+    if (falta <= 0) {
+        return s;
     }
-    return r;
-}
-
-static string padDer(const string& s, int ancho) {
-    string r = s;
-    while ((int)r.size() < ancho) {
-        r = r + " ";
-    }
-    return r;
+    int izquierda = falta / 2;
+    return string(izquierda, ' ') + s + string(falta - izquierda, ' ');
 }
 
 Bodega::Bodega(const string& codigo, const string& nombre, int tipo, int filas, int columnas)
@@ -166,24 +161,62 @@ void Bodega::dibujar() const {
     cout << "Bodega " << codigo << " - " << nombre << " (" << nombreTipo(tipo) << ") "
         << filas << "x" << columnas << endl;
 
-    // Encabezado con numero de columna
-    cout << "     ";
-    for (int j = 0; j < columnas; j++) {
-        cout << padDer(to_string(j), 3) << " ";
-    }
-    cout << endl;
-
+    // Ancho de celda: el texto mas largo entre identificador, LIBRE y codigo de paquete
+    int ancho = 5;
     for (int i = 0; i < filas; i++) {
-        cout << padIzq(to_string(i), 3) << "  ";
         for (int j = 0; j < columnas; j++) {
-            if (matriz[i][j].estaLibre()) {
-                cout << "[ ] ";
+            int largo = (int)matriz[i][j].getIdentificador().size();
+            if (largo > ancho) {
+                ancho = largo;
             }
-            else {
-                cout << "[X] ";
+            if (!matriz[i][j].estaLibre()) {
+                largo = (int)matriz[i][j].getPaquete()->getCodigo().size();
+                if (largo > ancho) {
+                    ancho = largo;
+                }
             }
         }
-        cout << endl;
     }
-    cout << "[ ] libre   [X] ocupada" << endl;
+
+    // Si la bodega es muy ancha, las columnas se reparten en bloques que caben en la consola
+    // (si no, cada fila se parte en varias lineas y la tabla se desordena)
+    const int ANCHO_CONSOLA = 100;
+    int columnasPorBloque = (ANCHO_CONSOLA - 1) / (ancho + 3);
+    if (columnasPorBloque < 1) {
+        columnasPorBloque = 1;
+    }
+
+    for (int inicio = 0; inicio < columnas; inicio += columnasPorBloque) {
+        int fin = inicio + columnasPorBloque;
+        if (fin > columnas) {
+            fin = columnas;
+        }
+
+        if (columnas > columnasPorBloque) {
+            cout << endl << "Columnas " << inicio << " a " << (fin - 1) << " (de 0 a " << (columnas - 1) << ")" << endl;
+        }
+
+        string separador = "+";
+        for (int j = inicio; j < fin; j++) {
+            separador += string(ancho + 2, '-') + "+";
+        }
+
+        // Cada celda tiene dos lineas: su identificador (A-00) y LIBRE o el codigo del paquete (PK101)
+        cout << separador << endl;
+        for (int i = 0; i < filas; i++) {
+            cout << "|";
+            for (int j = inicio; j < fin; j++) {
+                cout << " " << centrar(matriz[i][j].getIdentificador(), ancho) << " |";
+            }
+            cout << endl << "|";
+            for (int j = inicio; j < fin; j++) {
+                string contenido = "LIBRE";
+                if (!matriz[i][j].estaLibre()) {
+                    contenido = matriz[i][j].getPaquete()->getCodigo();
+                }
+                cout << " " << centrar(contenido, ancho) << " |";
+            }
+            cout << endl << separador << endl;
+        }
+    }
 }

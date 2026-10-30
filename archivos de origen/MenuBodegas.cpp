@@ -118,6 +118,7 @@ void MenuBodegas::ejecutar(CentroDistribucion* centro) {
     }
     int op;
     do {
+        system("cls");
         cout << endl << "===== BODEGAS (Centro: " << centro->getNombre() << ") =====" << endl;
         cout << "1. Registrar bodega" << endl;
         cout << "2. Buscar bodega por codigo" << endl;
@@ -133,6 +134,9 @@ void MenuBodegas::ejecutar(CentroDistribucion* centro) {
         case 4: consultarMatriz(centro); break;
         case 5: eliminarBodega(centro); break;
         default: break;
+        }
+        if (op != 0) {
+            system("pause");
         }
     } while (op != 0);
 }
