@@ -61,6 +61,9 @@ public:
 
     bool necesitaAlmacenarse() const;
 
+    // Estado en el que estaba el paquete cuando ocurrio la ultima incidencia
+    int getEstadoPrevioIncidencia() const;
+
 
     bool almacenar(Bodega* bodega, Celda* celda, Colaborador* responsable, const Fecha& fecha);
     bool reubicar(Bodega* nuevaBodega, Celda* nuevaCelda);   

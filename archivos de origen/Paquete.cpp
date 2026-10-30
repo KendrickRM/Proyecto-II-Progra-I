@@ -170,6 +170,10 @@ bool Paquete::necesitaAlmacenarse() const {
     return estado == RECIBIDO || (estado == INCIDENCIA && estadoPrevioIncidencia == RECIBIDO);
 }
 
+int Paquete::getEstadoPrevioIncidencia() const {
+    return estadoPrevioIncidencia;
+}
+
 bool Paquete::tieneColaboradorEnBitacora(const string& identificacion) const {
     return bitacora->participoColaborador(identificacion);
 }
