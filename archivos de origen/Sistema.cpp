@@ -172,6 +172,15 @@ static void quemarOperaciones(CentroDistribucion* c1, CentroDistribucion* c2, Ce
     p105->marcarEntregado(luis, Fecha(12, 10, 2026));
     d2->finalizar();                                                                       // Finalizado
 
+    // Incidencia estando Almacenado: conserva su celda
+    Paquete* p106 = quemarPaquete(c1, "PK106", "Vajilla de porcelana", 3.5, 2, "1001");
+    quemarAlmacenado(p106, b1, 0, 0, luis, Fecha(5, 10, 2026));
+    p106->registrarIncidencia(luis, Fecha(7, 10, 2026));
+
+    // Incidencia estando Recibido: queda sin ubicacion
+    Paquete* p107 = quemarPaquete(c1, "PK107", "Llantas", 12, 1, "1002");
+    p107->registrarIncidencia(luis, Fecha(8, 10, 2026));
+
     // ----- Centro 2 -----
     Colaborador* andrea = quemarColaborador(c2, "2101", "Andrea Solis Mena", "Operadora", Fecha(5, 1, 2023));
     Bodega* a2 = quemarBodega(c2, "A", "Bodega Tecnologia", 3, 2, 3);
@@ -187,34 +196,67 @@ static void quemarOperaciones(CentroDistribucion* c1, CentroDistribucion* c2, Ce
 
     quemarPaquete(c2, "PK203", "Contratos firmados", 0.5, 4, "2001");                // Recibido
 
+    // Incidencia en transito: el despacho sigue En proceso y el paquete queda sin celda
+    Colaborador* marco = quemarColaborador(c2, "2102", "Marco Quesada Mora", "Despachador", Fecha(1, 3, 2024));
+    Paquete* p204 = quemarPaquete(c2, "PK204", "Tablet y accesorios", 3.2, 3, "2002");
+    quemarAlmacenado(p204, a2, 1, 0, marco, Fecha(8, 10, 2026));
+    SolicitudEnvio* s7 = quemarSolicitud(c2, "007", p204, marco, "Naranjo, centro comercial", Fecha(9, 10, 2026));
+    quemarAprobacion(c2, s7, "003", Fecha(10, 10, 2026, 8, 0));
+    p204->registrarIncidencia(marco, Fecha(11, 10, 2026));
+
     // ----- Centro 3 -----
     quemarColaborador(c3, "3101", "Pedro Mena Soto", "Operador", Fecha(20, 6, 2022));
     Colaborador* pedro = c3->getColaboradores()->buscar("3101");
     Bodega* a3 = quemarBodega(c3, "A", "Bodega Documentos", 4, 2, 2);
     Paquete* p301 = quemarPaquete(c3, "PK301", "Escrituras", 0.8, 4, "3001");
     quemarAlmacenado(p301, a3, 0, 0, pedro, Fecha(6, 10, 2026));
+
+    Colaborador* lucia = quemarColaborador(c3, "3102", "Lucia Araya Campos", "Supervisora", Fecha(3, 2, 2024));
+
+    Paquete* p302 = quemarPaquete(c3, "PK302", "Planos del proyecto", 0.4, 4, "3002");
+    quemarAlmacenado(p302, a3, 0, 1, pedro, Fecha(7, 10, 2026));
+    quemarSolicitud(c3, "008", p302, pedro, "Paraiso, Calle Real", Fecha(8, 10, 2026));   // Pendiente
+
+    Paquete* p303 = quemarPaquete(c3, "PK303", "Titulos academicos", 0.6, 4, "3001");
+    quemarAlmacenado(p303, a3, 1, 0, lucia, Fecha(7, 10, 2026));
+    SolicitudEnvio* s9 = quemarSolicitud(c3, "009", p303, lucia, "Turrialba, Avenida Central", Fecha(8, 10, 2026));
+    Despacho* d4 = quemarAprobacion(c3, s9, "004", Fecha(9, 10, 2026, 10, 45));
+    p303->marcarEntregado(lucia, Fecha(10, 10, 2026));
+    d4->finalizar();                                                                       // Finalizado
+
+    // Bodega amplia: sus indices de dos digitos usan el formato largo (B-F02-C11)
+    Bodega* b3 = quemarBodega(c3, "B", "Bodega General Amplia", 1, 3, 12);
+    Paquete* p304 = quemarPaquete(c3, "PK304", "Sacos de granos", 7.5, 1, "3002");
+    quemarAlmacenado(p304, b3, 2, 11, pedro, Fecha(9, 10, 2026));
 }
 
 void Sistema::cargarDatosQuemados() {
-    CentroDistribucion* c1 = new CentroDistribucion("CD-001", "Centro San Jose", "San Jose",
+    CentroDistribucion* c1 = new CentroDistribucion("CD-01", "Centro San Jose", "San Jose",
         "Avenida Central, 200m norte del parque", "22221111");
-    CentroDistribucion* c2 = new CentroDistribucion("CD-002", "Centro Alajuela", "Alajuela",
+    CentroDistribucion* c2 = new CentroDistribucion("CD-02", "Centro Alajuela", "Alajuela",
         "Radial Francisco J. Orlich", "24332222");
-    CentroDistribucion* c3 = new CentroDistribucion("CD-003", "Centro Cartago", "Cartago",
+    CentroDistribucion* c3 = new CentroDistribucion("CD-03", "Centro Cartago", "Cartago",
         "Frente a las Ruinas, calle principal", "25513333");
 
     c1->getClientes()->insertar(new ClientePersonaFisica("1001", "Maria Rojas", "88880001", "maria@correo.com"));
     c1->getClientes()->insertar(new ClienteEmpresa("1002", "Importadora Tica", "22220002", "info@importadora.com", "Importacion", 10));
+    c1->getClientes()->insertar(new ClientePersonaFisica("1003", "Jorge Salas", "88880007", "jorge@correo.com"));   // sin movimientos: se puede eliminar
 
     c2->getClientes()->insertar(new ClientePersonaFisica("2001", "Carlos Vargas", "88880003", "carlos@correo.com"));
     c2->getClientes()->insertar(new ClienteEmpresa("2002", "Tecnologia Total", "24330004", "ventas@tecnototal.com", "Venta de tecnologia", 15));
 
     c3->getClientes()->insertar(new ClientePersonaFisica("3001", "Ana Jimenez", "88880005", "ana@correo.com"));
     c3->getClientes()->insertar(new ClienteEmpresa("3002", "Distribuidora Cartago", "25510006", "contacto@distcartago.com", "Distribucion de alimentos", 5));
+    c3->getClientes()->insertar(new ClientePersonaFisica("3003", "Sara Brenes", "88880008", "sara@correo.com"));   // sin movimientos: se puede eliminar
+
+    // Centro sin nada asociado: sirve para probar la eliminacion de centros
+    CentroDistribucion* c4 = new CentroDistribucion("CD-04", "Centro Heredia", "Heredia",
+        "Del parque central, 100m este", "22884444");
 
     quemarOperaciones(c1, c2, c3);
 
     registrarCentro(c1);
     registrarCentro(c2);
     registrarCentro(c3);
+    registrarCentro(c4);
 }

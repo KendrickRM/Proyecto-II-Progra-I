@@ -1,4 +1,5 @@
 #include "Paquete.h"
+#include "Utilidades.h"
 #include <iostream>
 using namespace std;
 
@@ -198,8 +199,24 @@ void Paquete::mostrarBitacora() const {
         cout << "El paquete aun no tiene cambios de estado." << endl;
         return;
     }
-    for (int i = 0; i < bitacora->getCantidad(); i++) {
-        cout << (i + 1) << ". ";
-        bitacora->obtener(i)->mostrar();
+    // Del cambio mas antiguo al mas reciente
+    int n = bitacora->getCantidad();
+    string encabezados[5] = { "#", "Estado anterior", "Nuevo estado", "Fecha", "Responsable" };
+    string* celdas = new string[n * 5];
+    for (int i = 0; i < n; i++) {
+        RegistroBitacora* r = bitacora->obtener(i);
+        celdas[i * 5] = to_string(i + 1);
+        celdas[i * 5 + 1] = nombreEstado(r->getEstadoAnterior());
+        celdas[i * 5 + 2] = nombreEstado(r->getEstadoNuevo());
+        celdas[i * 5 + 3] = r->getFecha().aTexto();
+        if (r->getResponsable() != 0) {
+            celdas[i * 5 + 4] = r->getResponsable()->getNombreCompleto()
+                + " (" + r->getResponsable()->getIdentificacion() + ")";
+        }
+        else {
+            celdas[i * 5 + 4] = "-";
+        }
     }
+    Utilidades::imprimirTabla(5, n, encabezados, celdas);
+    delete[] celdas;
 }

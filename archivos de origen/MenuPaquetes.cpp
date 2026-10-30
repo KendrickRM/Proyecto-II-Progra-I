@@ -2,6 +2,7 @@
 #include "Utilidades.h"
 #include "Paquete.h"
 #include "Relaciones.h"
+#include "Tarifa.h"
 #include "Bodega.h"
 #include "Cliente.h"
 #include "Colaborador.h"
@@ -24,7 +25,7 @@ static int leerEnRango(const string& msg, int min, int max) {
 
 
 static Paquete* pedirPaquete(Sistema* sistema, CentroDistribucion* centro) {
-    string codigo = Utilidades::leerTexto("Codigo del paquete: ");
+    string codigo = Utilidades::leerCodigoPaquete("Codigo del paquete: ");
     Paquete* p = centro->getPaquetes()->buscar(codigo);
     if (p == 0) {
         if (sistema->codigoPaqueteExiste(codigo)) {
@@ -77,7 +78,7 @@ static void mostrarCompatibles(CentroDistribucion* centro, int categoria) {
 
 static void elegirCeldaManual(CentroDistribucion* centro, int categoria, Bodega*& bodega, Celda*& celda) {
     while (true) {
-        string codigo = Utilidades::leerTexto("Codigo de la bodega elegida: ");
+        string codigo = Utilidades::leerCodigoBodega("Codigo de la bodega elegida: ");
         Bodega* b = centro->getBodegas()->buscar(codigo);
         if (b == 0 || !b->esCompatible(categoria) || b->celdasLibres() == 0) {
             cout << "Error: elija una de las bodegas compatibles con espacio libre de la lista." << endl;
@@ -102,14 +103,7 @@ static void elegirCeldaManual(CentroDistribucion* centro, int categoria, Bodega*
 
 static void registrarPaquete(Sistema* sistema, CentroDistribucion* centro) {
     cout << "--- Registrar paquete ---" << endl;
-    string codigo;
-    while (true) {
-        codigo = Utilidades::leerTexto("Codigo del paquete (PK + 3 digitos, ej: PK101): ");
-        if (Utilidades::codigoPaqueteValido(codigo)) {
-            break;
-        }
-        cout << "Error: el codigo debe ser PK seguido de exactamente 3 digitos." << endl;
-    }
+    string codigo = Utilidades::leerCodigoPaquete("Codigo del paquete: ");
     if (sistema->codigoPaqueteExiste(codigo)) {
         cout << "Error: ya existe un paquete con ese codigo en el sistema. Registro cancelado." << endl;
         return;
@@ -141,7 +135,7 @@ static void registrarPaquete(Sistema* sistema, CentroDistribucion* centro) {
 
 static void buscarPaquete(Sistema* sistema) {
     cout << "--- Buscar paquete ---" << endl;
-    string codigo = Utilidades::leerTexto("Codigo del paquete: ");
+    string codigo = Utilidades::leerCodigoPaquete("Codigo del paquete: ");
     Paquete* p = sistema->buscarPaquete(codigo);  
     if (p == 0) {
         cout << "No existe un paquete con ese codigo." << endl;
@@ -157,11 +151,30 @@ static void mostrarPaquetes(CentroDistribucion* centro) {
         cout << "No hay paquetes registrados en este centro." << endl;
         return;
     }
-    for (int i = 0; i < lista->getCantidad(); i++) {
-        cout << "---------------------------" << endl;
-        lista->obtener(i)->mostrar();
+    int n = lista->getCantidad();
+    string encabezados[7] = { "Codigo", "Descripcion", "Peso", "Categoria", "Cliente", "Estado", "Ubicacion" };
+    string* celdas = new string[n * 7];
+    for (int i = 0; i < n; i++) {
+        Paquete* p = lista->obtener(i);
+        string descripcion = p->getDescripcion();
+        if (descripcion.size() > 24) {
+            descripcion = descripcion.substr(0, 21) + "...";
+        }
+        celdas[i * 7] = p->getCodigo();
+        celdas[i * 7 + 1] = descripcion;
+        celdas[i * 7 + 2] = Tarifa::formatearDecimal(p->getPeso()) + " kg";
+        celdas[i * 7 + 3] = p->getNombreCategoria();
+        celdas[i * 7 + 4] = p->getPropietario()->getIdentificacion();
+        celdas[i * 7 + 5] = p->getNombreEstado();
+        if (p->getBodega() != 0 && p->getCelda() != 0) {
+            celdas[i * 7 + 6] = p->getCelda()->getIdentificador();
+        }
+        else {
+            celdas[i * 7 + 6] = "Sin ubicacion";
+        }
     }
-    cout << "---------------------------" << endl;
+    Utilidades::imprimirTabla(7, n, encabezados, celdas);
+    delete[] celdas;
 }
 
 static void eliminarPaquete(Sistema* sistema, CentroDistribucion* centro) {

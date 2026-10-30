@@ -21,7 +21,7 @@ static int leerEnRango(const string& msg, int min, int max) {
 
 
 static Bodega* pedirBodega(CentroDistribucion* centro) {
-    string codigo = Utilidades::leerTexto("Codigo de la bodega: ");
+    string codigo = Utilidades::leerCodigoBodega("Codigo de la bodega: ");
     Bodega* b = centro->getBodegas()->buscar(codigo);
     if (b == 0) {
         cout << "No existe una bodega con ese codigo en este centro." << endl;
@@ -31,7 +31,7 @@ static Bodega* pedirBodega(CentroDistribucion* centro) {
 
 static void registrarBodega(CentroDistribucion* centro) {
     cout << "--- Registrar bodega ---" << endl;
-    string codigo = Utilidades::leerTexto("Codigo de la bodega (ejemplo: A): ");
+    string codigo = Utilidades::leerCodigoBodega("Codigo de la bodega (ejemplo: A): ");
     if (centro->getBodegas()->buscar(codigo) != 0) {
         cout << "Error: ya existe una bodega con ese codigo en este centro. Registro cancelado." << endl;
         return;

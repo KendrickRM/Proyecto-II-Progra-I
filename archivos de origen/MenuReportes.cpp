@@ -16,7 +16,7 @@ static CentroDistribucion* elegirCentro(Sistema* sistema) {
 	for (int i = 0; i < centros->getCantidad(); i++) {
 		cout << "  " << centros->obtener(i)->getCodigo() << " - " << centros->obtener(i)->getNombre() << endl;
 	}
-	string codigo = Utilidades::leerTexto("Codigo del centro: ");
+	string codigo = Utilidades::leerCodigoCentro("Codigo del centro: ");
 	CentroDistribucion* centro = sistema->buscarCentro(codigo);
 	if (centro == 0) {
 		cout << "No existe un centro con ese codigo." << endl;
@@ -125,7 +125,7 @@ static void reporteClientesPorEnvios(Sistema* sistema) {
 // 3. Bitacora de un paquete (del cambio mas antiguo al mas reciente)
 static void reporteBitacoraPaquete(Sistema* sistema) {
 	cout << "--- Bitacora de un paquete ---" << endl;
-	string codigo = Utilidades::leerTexto("Codigo del paquete (ej: PK101): ");
+	string codigo = Utilidades::leerCodigoPaquete("Codigo del paquete: ");
 	Paquete* p = sistema->buscarPaquete(codigo);
 	if (p == 0) {
 		cout << "No existe un paquete con ese codigo." << endl;
@@ -139,7 +139,7 @@ static void reporteBitacoraPaquete(Sistema* sistema) {
 // 4. Consulta de despacho de un paquete
 static void reporteDespachoDePaquete(Sistema* sistema) {
 	cout << "--- Consulta de despacho de un paquete ---" << endl;
-	string codigo = Utilidades::leerTexto("Codigo del paquete (ej: PK101): ");
+	string codigo = Utilidades::leerCodigoPaquete("Codigo del paquete: ");
 	Paquete* p = sistema->buscarPaquete(codigo);
 	if (p == 0) {
 		cout << "No existe un paquete con ese codigo." << endl;

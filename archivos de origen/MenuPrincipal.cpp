@@ -19,7 +19,7 @@ CentroDistribucion* MenuPrincipal::seleccionarCentro() {
         return 0;
     }
     sistema->mostrarCentros();
-    string codigo = Utilidades::leerTexto("Codigo del centro: ");
+    string codigo = Utilidades::leerCodigoCentro("Codigo del centro: ");
     CentroDistribucion* centro = sistema->buscarCentro(codigo);
     if (centro == 0) cout << "No existe un centro con ese codigo." << endl;
     return centro;
@@ -40,7 +40,7 @@ void MenuPrincipal::mostrarMenuPrincipal() {
 
 void MenuPrincipal::registrarCentro() {
     cout << "--- Registrar centro ---" << endl;
-    string codigo = Utilidades::leerTexto("Codigo del centro: ");
+    string codigo = Utilidades::leerCodigoCentro("Codigo del centro: ");
     if (sistema->codigoCentroExiste(codigo)) {
         cout << "Error: ya existe un centro con ese codigo. Registro cancelado." << endl;
         return;
@@ -55,7 +55,7 @@ void MenuPrincipal::registrarCentro() {
 
 void MenuPrincipal::buscarCentro() {
     cout << "--- Buscar centro ---" << endl;
-    string codigo = Utilidades::leerTexto("Codigo del centro: ");
+    string codigo = Utilidades::leerCodigoCentro("Codigo del centro: ");
     CentroDistribucion* centro = sistema->buscarCentro(codigo);
     if (centro == 0) {
         cout << "No existe un centro con ese codigo." << endl;
@@ -66,7 +66,7 @@ void MenuPrincipal::buscarCentro() {
 
 void MenuPrincipal::eliminarCentro() {
     cout << "--- Eliminar centro ---" << endl;
-    string codigo = Utilidades::leerTexto("Codigo del centro: ");
+    string codigo = Utilidades::leerCodigoCentro("Codigo del centro: ");
     CentroDistribucion* centro = sistema->buscarCentro(codigo);
     if (centro == 0) {
         cout << "No existe un centro con ese codigo." << endl;
