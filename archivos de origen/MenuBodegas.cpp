@@ -7,7 +7,7 @@
 using namespace std;
 
 
-static const int MAX_DIMENSION = 50;
+static const int MAX_DIMENSION = Bodega::dimensionMaxima();
 
 static int leerEnRango(const string& msg, int min, int max) {
     while (true) {

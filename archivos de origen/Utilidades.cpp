@@ -2,6 +2,9 @@
 #include <iostream>
 using namespace std;
 
+// Largo maximo de cualquier texto digitado (evita entradas gigantes que desordenan la pantalla)
+static const int MAX_TEXTO = 100;
+
 static string leerLinea(const string& msg) {
     string linea;
     cout << msg;
@@ -23,7 +26,7 @@ int Utilidades::leerEntero(const string& msg) {
         }
         bool ok = true;
         int digitos = 0;
-        long valor = 0;
+        double valor = 0;
         while (t[i] != '\0') {
             if (t[i] < '0' || t[i] > '9') {
                 ok = false;
@@ -45,7 +48,8 @@ int Utilidades::leerEntero(const string& msg) {
             continue;
         }
         if (negativo) {
-            valor = -valor;
+            cout << "Error: no se permiten numeros negativos (el minimo es 0)." << endl;
+            continue;
         }
         return (int)valor;
     }
@@ -102,11 +106,11 @@ double Utilidades::leerDecimal(const string& msg) {
             cout << "Error: digite un numero decimal valido." << endl;
             continue;
         }
-        double valor = entero + fraccion / divisor;
         if (negativo) {
-            valor = -valor;
+            cout << "Error: no se permiten numeros negativos (el minimo es 0)." << endl;
+            continue;
         }
-        return valor;
+        return entero + fraccion / divisor;
     }
 }
 
@@ -123,6 +127,10 @@ string Utilidades::leerTexto(const string& msg) {
         }
         if (!hayTexto) {
             cout << "Error: el texto no puede estar vacio." << endl;
+            continue;
+        }
+        if ((int)t.length() > MAX_TEXTO) {
+            cout << "Error: el texto no puede tener mas de " << MAX_TEXTO << " caracteres." << endl;
             continue;
         }
         return t;
@@ -167,6 +175,10 @@ string Utilidades::leerCodigoTresDigitos(const string& msg) {
 string Utilidades::leerNombre(const string& msg) {
     while (true) {
         string t = leerLinea(msg);
+        if ((int)t.length() > MAX_TEXTO) {
+            cout << "Error: el nombre no puede tener mas de " << MAX_TEXTO << " caracteres." << endl;
+            continue;
+        }
         if (nombreValido(t)) {
             return t;
         }
@@ -177,6 +189,10 @@ string Utilidades::leerNombre(const string& msg) {
 string Utilidades::leerCorreo(const string& msg) {
     while (true) {
         string t = leerLinea(msg);
+        if ((int)t.length() > MAX_TEXTO) {
+            cout << "Error: el correo no puede tener mas de " << MAX_TEXTO << " caracteres." << endl;
+            continue;
+        }
         if (correoValido(t)) {
             return t;
         }
@@ -264,7 +280,21 @@ string Utilidades::aMayusculas(const string& texto) {
 
 // El codigo de bodega no distingue mayusculas de minusculas: "b" y "B" son la misma bodega
 string Utilidades::leerCodigoBodega(const string& msg) {
-    return aMayusculas(leerTexto(msg));
+    while (true) {
+        string t = aMayusculas(leerTexto(msg));
+        bool valido = (int)t.length() <= 5;
+        for (int i = 0; i < (int)t.length(); i++) {
+            bool letra = t[i] >= 'A' && t[i] <= 'Z';
+            bool digito = t[i] >= '0' && t[i] <= '9';
+            if (!letra && !digito) {
+                valido = false;
+            }
+        }
+        if (valido) {
+            return t;
+        }
+        cout << "Error: el codigo de bodega debe tener de 1 a 5 letras o numeros, sin espacios ni simbolos." << endl;
+    }
 }
 
 string Utilidades::leerTelefono(const string& msg) {

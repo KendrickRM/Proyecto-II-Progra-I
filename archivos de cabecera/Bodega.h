@@ -24,6 +24,9 @@ public:
     int getFilas() const;
     int getColumnas() const;
 
+    // Maximo de filas y de columnas (el minimo es 1)
+    static int dimensionMaxima();
+
     static bool tipoValido(int tipo);
     static string nombreTipo(int tipo);
 
