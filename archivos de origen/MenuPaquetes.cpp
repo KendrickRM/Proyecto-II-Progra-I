@@ -336,6 +336,14 @@ static void resolverIncidencia(Sistema* sistema, CentroDistribucion* centro) {
         cout << "La incidencia ocurrio estando Recibido: use la opcion Almacenar paquete." << endl;
         return;
     }
+    // Un paquete solo vuelve a En transito si su despacho esta En proceso
+    if (p->getEstadoPrevioIncidencia() == Paquete::EN_TRANSITO) {
+        Despacho* d = Relaciones::despachoDePaquete(centro, p);
+        if (d == 0 || d->getEstado() != Despacho::EN_PROCESO) {
+            cout << "No se puede resolver: el despacho del paquete debe estar En proceso." << endl;
+            return;
+        }
+    }
     Colaborador* responsable = pedirColaborador(centro);
     if (responsable == 0) {
         cout << "Operacion cancelada. No se realizo ningun cambio." << endl;
