@@ -144,6 +144,7 @@ static Despacho* quemarAprobacion(CentroDistribucion* c, SolicitudEnvio* s, cons
 }
 
 static void quemarOperaciones(CentroDistribucion* c1, CentroDistribucion* c2, CentroDistribucion* c3) {
+
     //Centro 1
     Colaborador* luis = quemarColaborador(c1, "1101", "Luis Mora Solano", "Operador", Fecha(15, 3, 2022));
     quemarColaborador(c1, "1102", "Sofia Rojas Vega", "Supervisora", Fecha(10, 8, 2021));

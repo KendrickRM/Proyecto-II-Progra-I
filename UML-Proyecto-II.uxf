@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.0"><zoom_level>10</zoom_level>
+<element><type>com.umlet.element.Relation</type><coordinates><x>220</x><y>2030</y><w>40</w><h>190</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>20;20;20;50;20;150;20;170</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>540</x><y>2030</y><w>40</w><h>190</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>20;20;20;50;20;150;20;170</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>3090</x><y>60</y><w>395</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1
+r2=centros</panel_attributes><additional_attributes>375;20;350;20;50;20;20;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>2440</x><y>80</y><w>370</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=0..*
+r2=primero</panel_attributes><additional_attributes>350;60;320;60;20;60;20;40;20;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>2320</x><y>80</y><w>40</w><h>240</h></coordinates><panel_attributes>lt=-&gt;
+m2=1
+r2=dato</panel_attributes><additional_attributes>20;20;20;40;20;200;20;220</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>460</x><y>540</y><w>1690</w><h>280</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1
+r2=clientes</panel_attributes><additional_attributes>1670;20;1640;20;20;20;20;240;20;260</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>380</x><y>960</y><w>40</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=0..*
+r2=primero</panel_attributes><additional_attributes>20;20;20;40;20;120;20;140</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>380</x><y>1180</y><w>40</w><h>690</h></coordinates><panel_attributes>lt=-&gt;
+m2=1
+r2=dato</panel_attributes><additional_attributes>20;20;20;40;20;640;20;670</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>2080</x><y>580</y><w>70</w><h>240</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1
+r2=colaboradores</panel_attributes><additional_attributes>50;20;20;20;20;200;20;220</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>2020</x><y>960</y><w>40</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=0..*
+r2=primero</panel_attributes><additional_attributes>20;20;20;40;20;120;20;140</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>2020</x><y>1180</y><w>40</w><h>720</h></coordinates><panel_attributes>lt=-&gt;
+m2=1
+r2=dato</panel_attributes><additional_attributes>20;20;20;40;20;680;20;700</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>1420</x><y>580</y><w>730</w><h>240</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1
+r2=paquetes</panel_attributes><additional_attributes>710;20;680;20;20;20;20;200;20;220</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>1320</x><y>960</y><w>40</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=0..*
+r2=primero</panel_attributes><additional_attributes>20;20;20;40;20;120;20;140</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>1320</x><y>1180</y><w>40</w><h>250</h></coordinates><panel_attributes>lt=-&gt;
+m2=1
+r2=dato</panel_attributes><additional_attributes>20;20;20;40;20;200;20;230</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>1100</x><y>560</y><w>1050</w><h>260</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1
+r2=solicitudes</panel_attributes><additional_attributes>1030;20;1000;20;20;20;20;220;20;240</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>980</x><y>950</y><w>40</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=0..*
+r2=primero</panel_attributes><additional_attributes>20;20;20;50;20;130;20;150</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>980</x><y>1180</y><w>40</w><h>1040</h></coordinates><panel_attributes>lt=-&gt;
+m2=1
+r2=dato</panel_attributes><additional_attributes>20;20;20;40;20;1000;20;1020</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>2520</x><y>600</y><w>40</w><h>220</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1
+r2=despachos</panel_attributes><additional_attributes>20;20;20;40;20;180;20;200</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>2620</x><y>950</y><w>40</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=0..*
+r2=primero</panel_attributes><additional_attributes>20;20;20;50;20;130;20;150</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>2620</x><y>1180</y><w>40</w><h>1040</h></coordinates><panel_attributes>lt=-&gt;
+m2=1
+r2=dato</panel_attributes><additional_attributes>20;20;20;40;20;1000;20;1020</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>2550</x><y>580</y><w>600</w><h>260</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1
+r2=bodegas</panel_attributes><additional_attributes>20;20;50;20;550;20;550;240;580;240</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>3220</x><y>960</y><w>40</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=0..*
+r2=primero</panel_attributes><additional_attributes>20;20;20;40;20;120;20;140</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>3220</x><y>1180</y><w>40</w><h>400</h></coordinates><panel_attributes>lt=-&gt;
+m2=1
+r2=dato</panel_attributes><additional_attributes>20;20;20;40;20;360;20;380</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>1520</x><y>2900</y><w>40</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=0..*
+r2=primero</panel_attributes><additional_attributes>20;20;20;40;20;80;20;100</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>1520</x><y>3080</y><w>40</w><h>140</h></coordinates><panel_attributes>lt=-&gt;
+m2=1
+r2=dato</panel_attributes><additional_attributes>20;20;20;40;20;100;20;120</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>1520</x><y>2030</y><w>40</w><h>740</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1
+r2=bitacora</panel_attributes><additional_attributes>20;20;20;50;20;690;20;720</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>2460</x><y>10</y><w>90</w><h>80</h></coordinates><panel_attributes>lt=-&gt;
+m2=0..1
+r2=siguiente</panel_attributes><additional_attributes>20;20;70;20;70;60;20;60</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>475</x><y>1110</y><w>90</w><h>80</h></coordinates><panel_attributes>lt=-&gt;
+m2=0..1
+r2=siguiente</panel_attributes><additional_attributes>20;20;70;20;70;60;20;60</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>2155</x><y>1110</y><w>90</w><h>80</h></coordinates><panel_attributes>lt=-&gt;
+m2=0..1
+r2=siguiente</panel_attributes><additional_attributes>20;20;70;20;70;60;20;60</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>1425</x><y>1110</y><w>90</w><h>80</h></coordinates><panel_attributes>lt=-&gt;
+m2=0..1
+r2=siguiente</panel_attributes><additional_attributes>20;20;70;20;70;60;20;60</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>1110</x><y>1110</y><w>90</w><h>80</h></coordinates><panel_attributes>lt=-&gt;
+m2=0..1
+r2=siguiente</panel_attributes><additional_attributes>20;20;70;20;70;60;20;60</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>2735</x><y>1110</y><w>90</w><h>80</h></coordinates><panel_attributes>lt=-&gt;
+m2=0..1
+r2=siguiente</panel_attributes><additional_attributes>20;20;70;20;70;60;20;60</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>3320</x><y>1110</y><w>90</w><h>80</h></coordinates><panel_attributes>lt=-&gt;
+m2=0..1
+r2=siguiente</panel_attributes><additional_attributes>20;20;70;20;70;60;20;60</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>1660</x><y>3010</y><w>90</w><h>80</h></coordinates><panel_attributes>lt=-&gt;
+m2=0..1
+r2=siguiente</panel_attributes><additional_attributes>20;20;70;20;70;60;20;60</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>3220</x><y>2030</y><w>40</w><h>190</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1..*
+r2=matriz</panel_attributes><additional_attributes>20;20;20;50;20;150;20;170</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>1540</x><y>2030</y><w>1510</w><h>210</h></coordinates><panel_attributes>lt=&lt;-&gt;
+m1=0..1
+m2=0..1
+r1=paquete
+r2=celda</panel_attributes><additional_attributes>20;20;20;50;20;130;1460;130;1460;190;1490;190</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>1560</x><y>1780</y><w>1480</w><h>40</h></coordinates><panel_attributes>lt=-&gt;
+m2=0..1
+r2=bodega</panel_attributes><additional_attributes>20;20;40;20;1440;20;1460;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>560</x><y>1920</y><w>580</w><h>40</h></coordinates><panel_attributes>lt=-&gt;
+m2=1
+r2=propietario</panel_attributes><additional_attributes>560;20;540;20;40;20;20;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>560</x><y>2000</y><w>300</w><h>220</h></coordinates><panel_attributes>lt=-&gt;
+m2=1
+r2=cliente</panel_attributes><additional_attributes>280;200;280;180;280;20;40;20;20;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>1140</x><y>2030</y><w>40</w><h>190</h></coordinates><panel_attributes>lt=-&gt;
+m2=1
+r2=paquete</panel_attributes><additional_attributes>20;170;20;150;20;50;20;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>1165</x><y>2000</y><w>685</w><h>240</h></coordinates><panel_attributes>lt=-&gt;
+m2=1
+r2=colaborador</panel_attributes><additional_attributes>20;220;35;220;635;220;635;20;665;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>1165</x><y>2360</y><w>1310</w><h>40</h></coordinates><panel_attributes>lt=-&gt;
+m2=1
+r2=solicitud</panel_attributes><additional_attributes>1290;20;1275;20;35;20;20;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>1560</x><y>1820</y><w>940</w><h>400</h></coordinates><panel_attributes>lt=-&gt;
+m2=1
+r2=paquete</panel_attributes><additional_attributes>920;380;920;360;920;20;40;20;20;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>520</x><y>2030</y><w>1955</w><h>230</h></coordinates><panel_attributes>lt=-&gt;
+m2=1
+r2=cliente</panel_attributes><additional_attributes>1935;210;1920;210;700;210;700;70;20;70;20;50;20;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>2220</x><y>2030</y><w>255</w><h>210</h></coordinates><panel_attributes>lt=-&gt;
+m2=1
+r2=colaborador</panel_attributes><additional_attributes>235;190;220;190;20;190;20;50;20;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>1720</x><y>2030</y><w>160</w><h>1190</h></coordinates><panel_attributes>lt=-&gt;
+m2=0..1
+r2=responsable</panel_attributes><additional_attributes>20;1170;20;1150;140;1150;140;50;140;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>2200</x><y>2030</y><w>40</w><h>740</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=1
+r2=fechaIngreso</panel_attributes><additional_attributes>20;20;20;50;20;690;20;720</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>1740</x><y>3090</y><w>420</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=1
+r2=fecha</panel_attributes><additional_attributes>20;130;40;130;400;130;400;50;400;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>1165</x><y>2520</y><w>995</w><h>250</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=1
+r2=fechaSolicitud</panel_attributes><additional_attributes>20;20;35;20;975;20;975;200;975;230</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>2420</x><y>2500</y><w>55</w><h>270</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=1
+r2=fechaDespacho</panel_attributes><additional_attributes>35;20;20;20;20;220;20;250</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>3815</x><y>120</y><w>1755</w><h>40</h></coordinates><panel_attributes>lt=-&gt;
+m2=1
+r2=sistema</panel_attributes><additional_attributes>1735;20;1705;20;45;20;20;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>745</x><y>1540</y><w>395</w><h>40</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>375;20;355;20;35;20;20;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>980</x><y>2540</y><w>40</w><h>160</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>20;20;20;40;20;120;20;140</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>2620</x><y>2520</y><w>40</w><h>180</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>20;20;20;40;20;140;20;160</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>1560</x><y>1940</y><w>290</w><h>40</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>20;20;40;20;240;20;270;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>1540</x><y>700</y><w>2895</w><h>730</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>20;710;20;680;20;20;2860;20;2875;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>2475</x><y>720</y><w>1960</w><h>2120</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>20;2100;45;2100;1905;2100;1905;20;1925;20;1940;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>1165</x><y>1730</y><w>3315</w><h>510</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>20;490;35;490;35;390;3295;390;3295;50;3295;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>540</x><y>1340</y><w>3980</w><h>530</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>3960;160;3960;140;3960;20;20;20;20;480;20;510</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>4380</x><y>720</y><w>260</w><h>1250</h></coordinates><panel_attributes>lt=.&gt;
+r1=&lt;&lt;throws&gt;&gt;</panel_attributes><additional_attributes>35;20;20;20;20;1200;240;1200;240;1230</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>2550</x><y>560</y><w>1910</w><h>480</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>1890;460;1870;460;870;460;870;20;50;20;20;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>1540</x><y>1230</y><w>2960</w><h>200</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>2940;20;2940;50;2940;150;20;150;20;180</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>1060</x><y>1200</y><w>3400</w><h>1020</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>3380;20;3360;20;3360;40;20;40;20;980;20;1000</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>2800</x><y>1230</y><w>1680</w><h>990</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>1660;20;1660;50;20;50;20;950;20;970</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>520</x><y>1230</y><w>3960</w><h>640</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>3940;20;3940;50;3940;90;20;90;20;590;20;620</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>2220</x><y>1230</y><w>2260</w><h>670</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>2240;20;2240;50;2240;230;20;230;20;630;20;650</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>5680</x><y>300</y><w>40</w><h>140</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>20;20;20;40;20;100;20;120</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>5480</x><y>280</y><w>90</w><h>300</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>70;20;40;20;20;20;20;280;40;280;60;280</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>5830</x><y>280</y><w>90</w><h>400</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>20;20;50;20;70;20;70;380;50;380;30;380</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>5460</x><y>260</y><w>110</w><h>510</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>90;20;60;20;20;20;20;460;40;460;40;490</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>5830</x><y>260</y><w>150</w><h>640</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>20;20;50;20;130;20;130;620;110;620;95;620</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>5420</x><y>240</y><w>150</w><h>780</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>130;20;100;20;20;20;20;760;40;760;55;760</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>5400</x><y>220</y><w>190</w><h>900</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>150;20;120;20;20;20;20;880;140;880;170;880</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>4840</x><y>200</y><w>730</w><h>170</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>710;20;680;20;20;20;20;120;20;150</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>2550</x><y>180</y><w>3020</w><h>220</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>3000;20;2970;20;1370;20;1370;200;50;200;20;200</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>2550</x><y>300</y><w>3010</w><h>160</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>2990;140;2970;140;2970;20;1330;20;1330;40;50;40;20;40</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>2550</x><y>280</y><w>3010</w><h>300</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>2990;280;2970;280;2370;280;2370;20;1350;20;1350;80;50;80;20;80</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>2550</x><y>540</y><w>3010</w><h>300</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>2990;140;2970;140;2430;140;2430;280;890;280;890;20;50;20;20;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>2550</x><y>520</y><w>2945</w><h>300</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>2925;260;2910;260;2250;260;2250;280;910;280;910;20;50;20;20;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>2550</x><y>500</y><w>2945</w><h>460</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>2925;400;2910;400;2910;440;930;440;930;20;50;20;20;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>2550</x><y>480</y><w>2945</w><h>540</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>2925;520;2910;520;2910;500;2330;500;2330;480;950;480;950;20;50;20;20;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>3815</x><y>260</y><w>1680</w><h>540</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>1660;520;1645;520;1645;20;45;20;20;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>3780</x><y>280</y><w>1715</w><h>620</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>1695;600;1680;600;1680;580;20;580;20;40;20;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>3760</x><y>280</y><w>1735</w><h>740</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>1715;720;1700;720;1260;720;1260;640;20;640;20;40;20;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>3740</x><y>280</y><w>1880</w><h>1040</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>1860;870;1860;900;1860;1020;20;1020;20;40;20;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>4865</x><y>440</y><w>695</w><h>40</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>675;20;655;20;35;20;20;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>4865</x><y>560</y><w>695</w><h>40</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>675;20;655;20;35;20;20;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>4865</x><y>640</y><w>695</w><h>40</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>675;20;655;20;35;20;20;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>4865</x><y>700</y><w>655</w><h>70</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>635;50;635;20;35;20;20;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>4840</x><y>740</y><w>655</w><h>160</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>635;140;620;140;20;140;20;40;20;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>4865</x><y>720</y><w>630</w><h>320</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>610;300;595;300;35;300;35;20;20;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>4865</x><y>720</y><w>725</w><h>400</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>705;380;675;380;675;360;55;360;55;20;35;20;20;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>4840</x><y>470</y><w>740</w><h>610</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>720;20;720;50;120;50;120;590;40;590;20;590</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>4840</x><y>580</y><w>740</w><h>480</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>720;20;720;40;100;40;100;460;40;460;20;460</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>4800</x><y>780</y><w>695</w><h>240</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>675;20;660;20;20;20;20;200;20;220</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>4820</x><y>880</y><w>675</w><h>140</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>655;20;640;20;20;20;20;100;20;120</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>4840</x><y>1100</y><w>750</w><h>40</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>730;20;700;20;40;20;20;20</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>4840</x><y>800</y><w>680</w><h>780</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>660;20;660;40;160;40;160;760;40;760;20;760</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>4840</x><y>910</y><w>680</w><h>650</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>660;20;660;50;140;50;140;630;40;630;20;630</additional_attributes></element>
+<element><type>com.umlet.element.Relation</type><coordinates><x>4840</x><y>1100</y><w>750</w><h>440</h></coordinates><panel_attributes>lt=.&gt;</panel_attributes><additional_attributes>730;20;700;20;700;420;40;420;20;420</additional_attributes></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>2105</x><y>2750</y><w>390</w><h>360</h></coordinates><panel_attributes>Fecha
+--
+-dia: int
+-mes: int
+-anio: int
+-hora: int
+-minuto: int
+--
++Fecha()
++Fecha(dia: int, mes: int, anio: int, hora: int = 0,
+    minuto: int = 0)
+_+esBisiesto(anio: int): bool_
+_+diasDelMes(mes: int, anio: int): int_
+_+esValida(dia: int, mes: int, anio: int): bool_
+_+esHoraValida(hora: int, minuto: int): bool_
+_+leerFecha(msg: string): Fecha_
+_+leerFechaHora(msg: string): Fecha_
++comparar(otra: Fecha): int
++aTexto(): string
++aTextoConHora(): string
++mostrar(): void</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>220</x><y>1850</y><w>360</w><h>200</h></coordinates><panel_attributes>Cliente
+--
+#identificacion: string
+#nombre: string
+#telefono: string
+#correo: string
+--
++Cliente(identificacion: string, nombre: string,
+    telefono: string, correo: string)
++obtenerDescuento(): double
++mostrar(): void
++~Cliente()</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>-180</x><y>2200</y><w>440</w><h>170</h></coordinates><panel_attributes>ClienteEmpresa
+--
+-actividadEconomica: string
+-porcentajeDescuento: double
+--
++ClienteEmpresa(identificacion: string, nombre: string,
+    telefono: string, correo: string,
+    actividadEconomica: string, porcentajeDescuento: double)
++obtenerDescuento(): double
++mostrar(): void</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>335</x><y>2200</y><w>450</w><h>120</h></coordinates><panel_attributes>ClientePersonaFisica
+--
+--
++ClientePersonaFisica(identificacion: string, nombre: string,
+    telefono: string, correo: string)
++obtenerDescuento(): double
++mostrar(): void</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>1830</x><y>1880</y><w>440</w><h>170</h></coordinates><panel_attributes>Colaborador
+--
+-identificacion: string
+-nombreCompleto: string
+-puesto: string
+-fechaIngreso: Fecha
+--
++Colaborador(identificacion: string, nombreCompleto: string,
+    puesto: string, fechaIngreso: Fecha)
++mostrar(): void</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>3030</x><y>2200</y><w>440</w><h>270</h></coordinates><panel_attributes>Celda
+--
+-codigoBodega: string
+-fila: int
+-columna: int
+-formatoLargo: bool
+-paquete: Paquete
+--
++Celda()
++Celda(codigoBodega: string, fila: int, columna: int,
+    formatoLargo: bool)
++inicializar(codigoBodega: string, fila: int, columna: int,
+    formatoLargo: bool): void
++estaLibre(): bool
++asignar(p: Paquete): bool
++liberar(): void</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>3020</x><y>1560</y><w>460</w><h>490</h></coordinates><panel_attributes>Bodega
+--
+-codigo: string
+-nombre: string
+-tipo: int
+-filas: int
+-columnas: int
+-matriz: Celda**
+--
++Bodega(codigo: string, nombre: string, tipo: int, filas: int,
+    columnas: int)
++~Bodega()
+_+dimensionMaxima(): int_
+_+tipoValido(tipo: int): bool_
+_+nombreTipo(tipo: int): string_
++esCompatible(categoria: int): bool
++posicionValida(fila: int, columna: int): bool
++getCelda(fila: int, columna: int): Celda
++asignarPaquete(fila: int, columna: int, p: Paquete): bool
++liberarCelda(fila: int, columna: int): bool
++primeraCeldaLibre(): Celda
++totalCeldas(): int
++celdasOcupadas(): int
++celdasLibres(): int
++todasLibres(): bool
++porcentajeOcupacion(): double
++porcentajeDisponible(): double
++mostrar(): void
++dibujar(): void</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>1120</x><y>1410</y><w>460</w><h>640</h></coordinates><panel_attributes>Paquete
+--
+-codigo: string
+-descripcion: string
+-peso: double
+-categoria: int
+-propietario: Cliente
+-codigoCentro: string
+-estado: int
+-estadoPrevioIncidencia: int
+-bodega: Bodega
+-celda: Celda
+-bitacora: ListaBitacora
+--
++Paquete(codigo: string, descripcion: string, peso: double,
+    categoria: int, propietario: Cliente, codigoCentro: string)
++~Paquete()
+-Paquete(otro: Paquete)
+-operator=(otro: Paquete): Paquete
+-aplicarCambio(nuevo: int, responsable: Colaborador,
+    fecha: Fecha): void
+_+pesoMaximo(): double_
+_+categoriaValida(categoria: int): bool_
+_+nombreEstado(estado: int): string_
++puedeCambiarA(nuevo: int): bool
++necesitaAlmacenarse(): bool
++almacenar(bodega: Bodega, celda: Celda,
+    responsable: Colaborador, fecha: Fecha): bool
++reubicar(nuevaBodega: Bodega, nuevaCelda: Celda): bool
++pasarATransito(responsable: Colaborador, fecha: Fecha): bool
++marcarEntregado(responsable: Colaborador, fecha: Fecha): bool
++registrarIncidencia(responsable: Colaborador,
+    fecha: Fecha): bool
++resolverIncidencia(responsable: Colaborador,
+    fecha: Fecha): bool
++tieneColaboradorEnBitacora(identificacion: string): bool
++mostrar(): void
++mostrarBitacora(): void</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>635</x><y>1480</y><w>130</w><h>150</h></coordinates><panel_attributes>&lt;&lt;enumeration&gt;&gt;
+Paquete::Estado
+--
+RECIBIDO = 1
+ALMACENADO = 2
+EN_TRANSITO = 3
+ENTREGADO = 4
+INCIDENCIA = 5
+--</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>1340</x><y>3200</y><w>420</w><h>170</h></coordinates><panel_attributes>RegistroBitacora
+--
+-estadoAnterior: int
+-estadoNuevo: int
+-fecha: Fecha
+-responsable: Colaborador
+--
++RegistroBitacora(estadoAnterior: int, estadoNuevo: int,
+    fecha: Fecha, responsable: Colaborador)
++mostrar(): void</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>815</x><y>2200</y><w>370</w><h>360</h></coordinates><panel_attributes>SolicitudEnvio
+--
+-codigo: string
+-cliente: Cliente
+-paquete: Paquete
+-colaborador: Colaborador
+-codigoCentro: string
+-destino: string
+-fechaSolicitud: Fecha
+-costoEstimado: double
+-estado: int
+--
++SolicitudEnvio(codigo: string, cliente: Cliente,
+    paquete: Paquete, colaborador: Colaborador,
+    codigoCentro: string, destino: string,
+    fechaSolicitud: Fecha)
++~SolicitudEnvio()
++toStringSolicitud(): string
++estaPendiente(): bool
++cambiarEstado(nuevoEstado: int): bool
+_+nombreEstado(estado: int): string_</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>910</x><y>2680</y><w>180</w><h>130</h></coordinates><panel_attributes>&lt;&lt;enumeration&gt;&gt;
+SolicitudEnvio::Estado
+--
+PENDIENTE = 1
+APROBADA = 2
+RECHAZADA = 3
+ANULADA = 4
+--</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>2455</x><y>2200</y><w>390</w><h>340</h></coordinates><panel_attributes>Despacho
+--
+-codigo: string
+-solicitud: SolicitudEnvio
+-paquete: Paquete
+-cliente: Cliente
+-colaborador: Colaborador
+-centroOrigen: string
+-destino: string
+-fechaDespacho: Fecha
+-estado: int
+--
++Despacho(codigo: string, solicitud: SolicitudEnvio,
+    paquete: Paquete, cliente: Cliente,
+    colaborador: Colaborador, centroOrigen: string,
+    destino: string, fechaDespacho: Fecha)
++~Despacho()
++toStringDespacho(): string
++finalizar(): bool
+_+nombreEstado(estado: int): string_</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>2580</x><y>2680</y><w>140</w><h>100</h></coordinates><panel_attributes>&lt;&lt;enumeration&gt;&gt;
+Despacho::Estado
+--
+EN_PROCESO = 1
+FINALIZADO = 2
+--</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>2130</x><y>300</y><w>440</w><h>320</h></coordinates><panel_attributes>CentroDistribucion
+--
+-codigo: string
+-nombre: string
+-provincia: string
+-direccion: string
+-telefono: string
+-clientes: ListaClientes
+-colaboradores: ListaColaboradores
+-paquetes: ListaPaquetes
+-solicitudes: ListaSolicitudes
+-bodegas: ListaBodegas
+-despachos: ListaDespachos
+--
++CentroDistribucion(codigo: string, nombre: string,
+    provincia: string, direccion: string, telefono: string)
++~CentroDistribucion()
++estaVacio(): bool
++mostrar(): void</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>3465</x><y>0</y><w>370</w><h>300</h></coordinates><panel_attributes>Sistema
+--
+-centros: ListaCentros
+--
++Sistema()
++~Sistema()
++registrarCentro(c: CentroDistribucion): bool
++buscarCentro(codigo: string): CentroDistribucion
++eliminarCentro(codigo: string): bool
++mostrarCentros(): void
++codigoCentroExiste(codigo: string): bool
++codigoPaqueteExiste(codigo: string): bool
++codigoSolicitudExiste(codigo: string): bool
++codigoDespachoExiste(codigo: string): bool
++buscarPaquete(codigo: string): Paquete
++buscarSolicitud(codigo: string): SolicitudEnvio
++buscarDespacho(codigo: string): Despacho
++cargarDatosQuemados(): void</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>2220</x><y>0</y><w>260</w><h>100</h></coordinates><panel_attributes>NodoCentro
+--
+-dato: CentroDistribucion
+-siguiente: NodoCentro
+--
++NodoCentro(d: CentroDistribucion)</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>2790</x><y>0</y><w>320</w><h>180</h></coordinates><panel_attributes>ListaCentros
+--
+-primero: NodoCentro
+-cantidad: int
+--
++ListaCentros()
++insertar(c: CentroDistribucion): void
++buscar(codigo: string): CentroDistribucion
++eliminar(codigo: string): bool
++obtener(pos: int): CentroDistribucion
++~ListaCentros()</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>305</x><y>1100</y><w>190</w><h>100</h></coordinates><panel_attributes>NodoCliente
+--
+-dato: Cliente
+-siguiente: NodoCliente
+--
++NodoCliente(d: Cliente)</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>290</x><y>800</y><w>220</w><h>180</h></coordinates><panel_attributes>ListaClientes
+--
+-primero: NodoCliente
+-cantidad: int
+--
++ListaClientes()
++insertar(c: Cliente): void
++buscar(id: string): Cliente
++eliminar(id: string): bool
++obtener(pos: int): Cliente
++~ListaClientes()</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>1925</x><y>1100</y><w>250</w><h>100</h></coordinates><panel_attributes>NodoColaborador
+--
+-dato: Colaborador
+-siguiente: NodoColaborador
+--
++NodoColaborador(d: Colaborador)</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>1925</x><y>800</y><w>250</w><h>180</h></coordinates><panel_attributes>ListaColaboradores
+--
+-primero: NodoColaborador
+-cantidad: int
+--
++ListaColaboradores()
++insertar(c: Colaborador): void
++buscar(id: string): Colaborador
++eliminar(id: string): bool
++obtener(pos: int): Colaborador
++~ListaColaboradores()</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>1255</x><y>1100</y><w>190</w><h>100</h></coordinates><panel_attributes>NodoPaquete
+--
+-dato: Paquete
+-siguiente: NodoPaquete
+--
++NodoPaquete(d: Paquete)</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>1225</x><y>800</y><w>250</w><h>180</h></coordinates><panel_attributes>ListaPaquetes
+--
+-primero: NodoPaquete
+-cantidad: int
+--
++ListaPaquetes()
++insertar(p: Paquete): void
++buscar(codigo: string): Paquete
++eliminar(codigo: string): bool
++obtener(pos: int): Paquete
++~ListaPaquetes()</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>870</x><y>1100</y><w>260</w><h>100</h></coordinates><panel_attributes>NodoSolicitud
+--
+-dato: SolicitudEnvio
+-siguiente: NodoSolicitud
+--
++NodoSolicitud(d: SolicitudEnvio)</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>850</x><y>800</y><w>300</w><h>170</h></coordinates><panel_attributes>ListaSolicitudes
+--
+-primero: NodoSolicitud
+-cantidad: int
+--
++ListaSolicitudes()
++insertar(s: SolicitudEnvio): void
++buscar(codigo: string): SolicitudEnvio
++obtener(pos: int): SolicitudEnvio
++~ListaSolicitudes()</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>2545</x><y>1100</y><w>210</w><h>100</h></coordinates><panel_attributes>NodoDespacho
+--
+-dato: Despacho
+-siguiente: NodoDespacho
+--
++NodoDespacho(d: Despacho)</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>2520</x><y>800</y><w>260</w><h>170</h></coordinates><panel_attributes>ListaDespachos
+--
+-primero: NodoDespacho
+-cantidad: int
+--
++ListaDespachos()
++insertar(d: Despacho): void
++buscar(codigo: string): Despacho
++obtener(pos: int): Despacho
++~ListaDespachos()</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>3160</x><y>1100</y><w>180</w><h>100</h></coordinates><panel_attributes>NodoBodega
+--
+-dato: Bodega
+-siguiente: NodoBodega
+--
++NodoBodega(d: Bodega)</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>3130</x><y>800</y><w>240</w><h>180</h></coordinates><panel_attributes>ListaBodegas
+--
+-primero: NodoBodega
+-cantidad: int
+--
++ListaBodegas()
++insertar(b: Bodega): void
++buscar(codigo: string): Bodega
++eliminar(codigo: string): bool
++obtener(pos: int): Bodega
++~ListaBodegas()</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>1420</x><y>3000</y><w>260</w><h>100</h></coordinates><panel_attributes>NodoBitacora
+--
+-dato: RegistroBitacora
+-siguiente: NodoBitacora
+--
++NodoBitacora(d: RegistroBitacora)</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>1360</x><y>2750</y><w>380</w><h>170</h></coordinates><panel_attributes>ListaBitacora
+--
+-primero: NodoBitacora
+-cantidad: int
+--
++ListaBitacora()
++insertar(r: RegistroBitacora): void
++obtener(pos: int): RegistroBitacora
++participoColaborador(identificacion: string): bool
++~ListaBitacora()</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>4440</x><y>1500</y><w>420</w><h>250</h></coordinates><panel_attributes>Tarifa
+--
+_-TARIFA_GENERAL: double_
+_-TARIFA_FRAGIL: double_
+_-TARIFA_TECNOLOGIA: double_
+_-TARIFA_DOCUMENTOS: double_
+--
+-Tarifa()
+-Tarifa(otra: Tarifa)
+-operator=(otra: Tarifa): Tarifa
+_+obtenerTarifa(categoria: int): double_
+_+calcularCostoBase(peso: double, categoria: int): double_
+_+calcularCostoFinal(peso: double, categoria: int,_
+_    cliente: Cliente): double_
+_+formatearDecimal(valor: double): string_</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>4440</x><y>1000</y><w>420</w><h>250</h></coordinates><panel_attributes>Relaciones
+--
+--
+_+solicitudPendienteDe(centro: CentroDistribucion,_
+_    paquete: Paquete): SolicitudEnvio_
+_+solicitudAprobadaDe(centro: CentroDistribucion,_
+_    paquete: Paquete): SolicitudEnvio_
+_+paqueteTieneSolicitudes(centro: CentroDistribucion,_
+_    paquete: Paquete): bool_
+_+despachoDePaquete(centro: CentroDistribucion,_
+_    paquete: Paquete): Despacho_
+_+clienteTieneDependencias(centro: CentroDistribucion,_
+_    cliente: Cliente): bool_
+_+colaboradorTieneDependencias(centro: CentroDistribucion,_
+_    colaborador: Colaborador): bool_</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>4590</x><y>1950</y><w>120</w><h>40</h></coordinates><panel_attributes>EntradaCerrada
+--</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>4415</x><y>350</y><w>470</w><h>410</h></coordinates><panel_attributes>Utilidades
+--
+--
+_+leerEntero(msg: string): int_
+_+leerDecimal(msg: string): double_
+_+leerTexto(msg: string): string_
+_+leerOpcion(min: int, max: int): int_
+_+limpiarBuffer(): void_
+_+imprimirTabla(columnas: int, filas: int, encabezados: string[],_
+_    celdas: string[], centrarCeldas: bool = false): void_
+_+leerIdCuatroDigitos(msg: string): string_
+_+leerCodigoTresDigitos(msg: string): string_
+_+leerNombre(msg: string): string_
+_+leerCodigoCentro(msg: string): string_
+_+leerCodigoPaquete(msg: string): string_
+_+leerCodigoBodega(msg: string): string_
+_+aMayusculas(texto: string): string_
+_+leerCorreo(msg: string): string_
+_+leerTelefono(msg: string): string_
+_+soloDigitos(texto: string, longitud: int): bool_
+_+nombreValido(texto: string): bool_
+_+telefonoValido(texto: string): bool_
+_+correoValido(texto: string): bool_
+_+codigoPaqueteValido(texto: string): bool_</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>5550</x><y>0</y><w>300</w><h>320</h></coordinates><panel_attributes>MenuPrincipal
+--
+-sistema: Sistema
+--
++MenuPrincipal(sistema: Sistema)
++ejecutar(): void
+-mostrarMenuPrincipal(): void
+-menuCentros(): void
+-menuClientes(): void
+-menuColaboradores(): void
+-menuBodegas(): void
+-menuPaquetes(): void
+-menuSolicitudes(): void
+-menuDespachos(): void
+-menuReportes(): void
+-seleccionarCentro(): CentroDistribucion
+-registrarCentro(): void
+-buscarCentro(): void
+-eliminarCentro(): void</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>5540</x><y>420</y><w>320</w><h>70</h></coordinates><panel_attributes>MenuClientes
+--
+--
+_+ejecutar(centro: CentroDistribucion): void_</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>5540</x><y>530</y><w>320</w><h>70</h></coordinates><panel_attributes>MenuColaboradores
+--
+--
+_+ejecutar(centro: CentroDistribucion): void_</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>5540</x><y>640</y><w>320</w><h>70</h></coordinates><panel_attributes>MenuBodegas
+--
+--
+_+ejecutar(centro: CentroDistribucion): void_</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>5475</x><y>750</y><w>450</w><h>70</h></coordinates><panel_attributes>MenuPaquetes
+--
+--
+_+ejecutar(sistema: Sistema, centro: CentroDistribucion): void_</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>5475</x><y>860</y><w>450</w><h>70</h></coordinates><panel_attributes>MenuSolicitudes
+--
+--
+_+ejecutar(sistema: Sistema, centro: CentroDistribucion): void_</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>5475</x><y>970</y><w>450</w><h>70</h></coordinates><panel_attributes>MenuDespachos
+--
+--
+_+ejecutar(sistema: Sistema, centro: CentroDistribucion): void_</panel_attributes><additional_attributes/></element>
+<element><type>com.umlet.element.Class</type><coordinates><x>5570</x><y>1080</y><w>260</w><h>70</h></coordinates><panel_attributes>MenuReportes
+--
+--
+_+ejecutar(sistema: Sistema): void_</panel_attributes><additional_attributes/></element>
+</diagram>
